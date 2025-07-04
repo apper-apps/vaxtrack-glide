@@ -8,12 +8,12 @@ const SearchBar = ({
   onSearch, 
   placeholder = "Search vaccines...",
   className = '',
-  showFilters = false,
-  filters = [],
-  onFilterChange
+  searchTerm: externalSearchTerm = '',
+  hasActiveFilters = false,
+  onToggleFilters,
+  onClearFilters
 }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [showFilterDropdown, setShowFilterDropdown] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(externalSearchTerm);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const SearchBar = ({
     onSearch('');
   };
 
-  return (
+return (
     <div className={`relative ${className}`}>
       <form onSubmit={handleSearch} className="flex items-center space-x-2">
         <div className="flex-1 relative">
@@ -47,53 +47,42 @@ const SearchBar = ({
             </button>
           )}
         </div>
-        
-        <Button type="submit" variant="primary" icon="Search">
+<Button type="submit" variant="primary" icon="Search">
           Search
         </Button>
         
-        {showFilters && (
-          <div className="relative">
-            <Button
-              type="button"
-              variant="secondary"
-              icon="Filter"
-              onClick={() => setShowFilterDropdown(!showFilterDropdown)}
-            >
-              Filters
-            </Button>
-            
-            {showFilterDropdown && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 z-50"
-              >
-                <div className="p-4 space-y-4">
-                  {filters.map((filter) => (
-                    <div key={filter.key}>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {filter.label}
-                      </label>
-                      <select
-                        value={filter.value}
-                        onChange={(e) => onFilterChange(filter.key, e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                      >
-                        <option value="">All</option>
-                        {filter.options.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+        {/* Filter Toggle Button */}
+        {onToggleFilters && (
+          <Button
+            type="button"
+            variant="secondary"
+            icon="Filter"
+            onClick={onToggleFilters}
+            className={`relative ${hasActiveFilters ? 'bg-primary/10 text-primary border-primary' : ''}`}
+          >
+            Filters
+            {hasActiveFilters && (
+              <span className="absolute -top-2 -right-2 bg-primary text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                !
+              </span>
             )}
-          </div>
+          </Button>
+        )}
+        
+        {/* Clear All Button */}
+        {(searchTerm || hasActiveFilters) && onClearFilters && (
+          <Button
+            type="button"
+            variant="ghost"
+            icon="X"
+            onClick={() => {
+              handleClear();
+              onClearFilters();
+            }}
+            className="text-gray-500 hover:text-gray-700"
+          >
+            Clear All
+          </Button>
         )}
       </form>
     </div>
