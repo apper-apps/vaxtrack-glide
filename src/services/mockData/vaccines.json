@@ -1,0 +1,154 @@
+[
+  {
+    "Id": 1,
+    "commercialName": "Daptacel SDV",
+    "genericName": "DTaP",
+    "family": "Diphtheria, Tetanus, Pertussis",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 2,
+    "commercialName": "Quadracel PFS",
+    "genericName": "DTaP-IPV",
+    "family": "Diphtheria, Tetanus, Pertussis, Polio",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 3,
+    "commercialName": "IPOL MDV",
+    "genericName": "IPV",
+    "family": "Polio",
+    "minStock": 5,
+    "unitSize": 10
+  },
+  {
+    "Id": 4,
+    "commercialName": "Engerix-B PFS",
+    "genericName": "Hep B",
+    "family": "Hepatitis B",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 5,
+    "commercialName": "Beyfortus 100mg PFS",
+    "genericName": "RSV",
+    "family": "Respiratory Syncytial Virus",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 6,
+    "commercialName": "Beyfortus 50mg PFS",
+    "genericName": "RSV",
+    "family": "Respiratory Syncytial Virus",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 7,
+    "commercialName": "MMR II SDV",
+    "genericName": "MMR",
+    "family": "Measles, Mumps, Rubella",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 8,
+    "commercialName": "ActHib SDV",
+    "genericName": "Hib",
+    "family": "Haemophilus influenzae type b",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 9,
+    "commercialName": "Adacel PFS",
+    "genericName": "Tdap",
+    "family": "Tetanus, Diphtheria, Pertussis",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 10,
+    "commercialName": "Varivax SDV",
+    "genericName": "Varicella",
+    "family": "Chickenpox",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 11,
+    "commercialName": "MenQuadFi SDV",
+    "genericName": "MCV4",
+    "family": "Meningococcal",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 12,
+    "commercialName": "Bexsero PFS",
+    "genericName": "MenB",
+    "family": "Meningococcal B",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 13,
+    "commercialName": "Vaqta PFS",
+    "genericName": "Hep A",
+    "family": "Hepatitis A",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 14,
+    "commercialName": "Pentacel SDV",
+    "genericName": "DTaP-IPV-Hib",
+    "family": "Diphtheria, Tetanus, Pertussis, Polio, Hib",
+    "minStock": 5,
+    "unitSize": 1
+  },
+  {
+    "Id": 15,
+    "commercialName": "Gardasil PFS",
+    "genericName": "HPV",
+    "family": "Human Papillomavirus",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 16,
+    "commercialName": "Proquad SDV",
+    "genericName": "MMRV",
+    "family": "Measles, Mumps, Rubella, Varicella",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 17,
+    "commercialName": "Rotateq Oral Applicator",
+    "genericName": "RV (Rotavirus)",
+    "family": "Rotavirus",
+    "minStock": 15,
+    "unitSize": 1
+  },
+  {
+    "Id": 18,
+    "commercialName": "Vaxelis PFS",
+    "genericName": "DTaP-IPV-Hib-Hep B",
+    "family": "Diphtheria, Tetanus, Pertussis, Polio, Hib, Hepatitis B",
+    "minStock": 10,
+    "unitSize": 1
+  },
+  {
+    "Id": 19,
+    "commercialName": "Vaxneuvance (PCV15) PFS",
+    "genericName": "PCV15",
+    "family": "Pneumococcal",
+    "minStock": 10,
+    "unitSize": 1
+  }
+]
