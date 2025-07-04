@@ -11,16 +11,7 @@ const Header = ({ title, onMenuClick, showMenu = false }) => {
     >
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-4">
-            {showMenu && (
-              <Button
-                variant="ghost"
-                size="sm"
-                icon="Menu"
-                onClick={onMenuClick}
-                className="lg:hidden"
-              />
-            )}
+<div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <ApperIcon name="Shield" className="w-5 h-5 text-white" />
@@ -31,6 +22,15 @@ const Header = ({ title, onMenuClick, showMenu = false }) => {
                 </h1>
               </div>
             </div>
+            {showMenu && (
+              <Button
+                variant="ghost"
+                size="sm"
+                icon="Menu"
+                onClick={onMenuClick}
+                className="lg:hidden"
+              />
+            )}
           </div>
 
           <div className="flex items-center space-x-4">
