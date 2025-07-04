@@ -167,8 +167,8 @@ const handleAdjust = (vaccine) => {
     expired: inventory.filter(item => new Date(item.expirationDate) < new Date()).length
   };
 
-  return (
-    <div className="p-6 space-y-6">
+return (
+    <div className="p-4 sm:p-6 space-y-6 transition-all duration-300 ease-in-out">
       {/* Alert Banner */}
       {alerts.length > 0 && (
         <AlertBanner 
@@ -188,8 +188,8 @@ const handleAdjust = (vaccine) => {
         </div>
       </div>
 
-      {/* Statistics Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+{/* Statistics Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <StatCard
           title="Total Vaccines"
           value={stats.totalVaccines}
@@ -221,7 +221,7 @@ const handleAdjust = (vaccine) => {
       <SearchBar
         onSearch={handleSearch}
         placeholder="Search by vaccine name, lot number..."
-        className="max-w-md"
+        className="max-w-md w-full sm:w-auto"
         searchTerm={searchTerm}
         hasActiveFilters={Object.values(filters).some(v => v && v !== '')}
         onToggleFilters={handleToggleFilters}
